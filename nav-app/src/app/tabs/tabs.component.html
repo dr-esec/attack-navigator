@@ -186,19 +186,19 @@
                         <div class="md-column">
                             <!-- bundle URL -->
                             <mat-form-field>
-                                <mat-label>Collection or STIX bundle URL</mat-label>
-                                <input type="url" matInput [(ngModel)]="loadData.url" />
+                                <mat-label>Collection or STIX bundle URL (disabled)</mat-label>
+                                <input disabled type="url" matInput [(ngModel)]="loadData.url" />
                             </mat-form-field>
                             <!-- bundle version number -->
                             <mat-form-field>
                                 <mat-label>Bundle version number</mat-label>
-                                <input type="number" matInput [(ngModel)]="loadData.version" />
+                                <input disabled type="number" matInput [(ngModel)]="loadData.version" />
                                 <mat-hint>ATT&CK version (e.g. 12)</mat-hint>
                             </mat-form-field>
                             <!-- bundle domain identifier -->
                             <mat-form-field>
                                 <mat-label>Bundle domain</mat-label>
-                                <input type="text" matInput [(ngModel)]="loadData.identifier" />
+                                <input disabled type="text" matInput [(ngModel)]="loadData.identifier" />
                                 <mat-hint>Domain identifier (e.g. defending-iaas)</mat-hint>
                             </mat-form-field>
                         </div>
@@ -240,8 +240,8 @@
                     </div>
                     <div class="md-column">
                         <mat-form-field class="hide-subscript">
-                            <mat-label>Load from URL</mat-label>
-                            <input type="text" matInput [(ngModel)]="loadURL" />
+                            <mat-label>Load from URL (disabled)</mat-label>
+                            <input disabled type="text" matInput [(ngModel)]="loadURL" />
                             <button
                                 class="icon-button-scale-down"
                                 matSuffix
@@ -485,15 +485,15 @@
                                 <ul class="layer-links">
                                     <li *ngFor="let layerLinkURL of layerLinkURLs; let i = index; trackBy: trackByFunction">
                                         <mat-form-field>
-                                            <mat-label>default layer {{i+1}}</mat-label>
-                                            <input type="text" matInput [(ngModel)]="layerLinkURLs[i]" />
+                                            <mat-label>default layer {{i+1}} (disabled)</mat-label>
+                                            <input disabled type="text" matInput [(ngModel)]="layerLinkURLs[i]" />
                                             <button class="icon-button-scale-down" matSuffix mat-icon-button aria-label="remove" (click)="removeLayerLink(i)">
                                                 <mat-icon>close</mat-icon>
                                             </button>
                                         </mat-form-field>
                                     </li>
                                     <li>
-                                        <button mat-raised-button (click)="addLayerLink()">
+                                        <button disabled mat-raised-button (click)="addLayerLink()">
                                             add {{ layerLinkURLs.length > 0 ? 'another' : 'a' }} default layer
                                         </button>
                                     </li>

@@ -29,7 +29,7 @@ describe('LayerInformationComponent', () => {
     });
 
 	it('should return correct layerFormatLink based on global layer version', () => {
-		let filePath = `./layers/spec/v${globals.layerVersion}/layerformat.md`;
+		let filePath = `./attck-navigator/layers/spec/v${globals.layerVersion}/layerformat.md`;
 		expect(component.layerFormatLink).toBe(filePath);
 	});
 });

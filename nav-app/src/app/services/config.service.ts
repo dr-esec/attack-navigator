@@ -201,7 +201,7 @@ export class ConfigService {
      */
     public loadConfig() {
         return this.http
-            .get('./assets/config.json')
+            .get('./attck-navigator/assets/config.json')
             .pipe(
                 map((config: any) => this.validateConfig(config)),
                 switchMap((config: any) => {

@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
             }
             return false;
         };
+        // TODO: change theme to light only
         if (hasCookie('is_user_theme_dark') && getCookie('is_user_theme_dark') === 'true') {
             this.user_theme = 'theme-override-dark';
         } else if (getCookie('is_user_theme_dark') === 'false') {
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit {
         this.iconsService.registerIcons();
         this.titleService.setTitle(this.title);
     }
-
+    // TODO: change theme to light only
     themeChangeHandler(theme: string) {
         if (theme === 'system') {
             if (hasCookie('is_user_theme_dark')) deleteCookie('is_user_theme_dark');

@@ -9,6 +9,6 @@ import * as globals from '../utils/globals';
 })
 export class LayerInformationComponent {
     public get layerFormatLink(): string {
-        return `./layers/spec/v${globals.layerVersion}/layerformat.md`;
+        return `./attck-navigator/layers/spec/v${globals.layerVersion}/layerformat.md`;
     }
 }
